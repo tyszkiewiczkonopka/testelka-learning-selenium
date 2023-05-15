@@ -26,7 +26,8 @@ public class TaskElements {
         driver.findElement(By.id("title")).sendKeys("Knowledge Transfer");
         driver.findElement(By.className("btn-primary")).click();
 
-        Assertions.assertDoesNotThrow(() -> driver.findElement(By.className("mt-3")),
-                "User wasn't redirected to step 2: choosing the date.");
+        WebElement stepTracking = driver.findElement(By.className("tracking-tight"));
+        Assertions.assertEquals("Step 2 of 3", stepTracking.getText(),
+                "Step tracking doesn't show that we are at the second step.");
     }
 }
