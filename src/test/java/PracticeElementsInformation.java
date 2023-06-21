@@ -27,6 +27,16 @@ public class PracticeElementsInformation {
         driver.quit();
     }
 
+    //POBIERANIE WARTOŚCI ATRYBUTU
+
+    @Test
+    public void search_field_should_have_placeholder_text(){
+        driver.get("http://localhost:8080/");
+        WebElement searchField = driver.findElement(By.id("wc-block-search__input-1"));
+        Assertions.assertEquals("Search products…", searchField.getDomAttribute("placeholder"),
+                "Placeholder value is not correct");
+    }
+
     @Test
     public void select_all_should_checkbox_in_every_option() {
         driver.get("http://localhost:8080/my-account/");
