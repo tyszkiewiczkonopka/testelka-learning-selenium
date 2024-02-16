@@ -1,3 +1,5 @@
+package tests;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class BaseTests {
+public class BaseTest {
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected final String baseUrl = "http://localhost:8080";
@@ -18,7 +20,7 @@ public class BaseTests {
     }
 
     @AfterEach
-    public void quitdriver() {
+    public void quitDriver() {
         driver.quit();
     }
 }

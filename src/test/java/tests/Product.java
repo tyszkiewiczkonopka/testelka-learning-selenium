@@ -1,9 +1,11 @@
+package tests;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class ProductTests extends BaseTests {
+public class Product extends BaseTest {
 
     private final By qtyFieldLocator = By.className("qty");
     @Test
@@ -14,7 +16,7 @@ public class ProductTests extends BaseTests {
         productQuantity.sendKeys("3");
 
         Assertions.assertEquals("3", productQuantity.getDomProperty("value"),
-                "Product quantity not changed.");
+                "tests.Product quantity not changed.");
     }
 
 }

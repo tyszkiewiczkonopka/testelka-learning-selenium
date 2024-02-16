@@ -96,7 +96,7 @@
 9. Wspólne elementy stron i uporządkowanie
 10. Wspólne elementy: dziedziczenie
 11. Wspólne elementy: kompozycja
-12. BaseTest
+12. tests.BaseTest
 13. Zmiana przeglądarki
 14. Konfiguracja z pliku
 15. Powrót do drivera

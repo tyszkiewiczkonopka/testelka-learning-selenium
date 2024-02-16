@@ -1,5 +1,6 @@
+package tests;
+
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -7,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class AdminTests extends BaseTests{
+public class Admin extends BaseTest{
 
     @BeforeEach
     public void adminLogin(){
@@ -33,7 +34,7 @@ public class AdminTests extends BaseTests{
 
         List<WebElement> productCheckboxes = driver.findElements(By.name("post[]"));
         long numberOfSelectedCheckboxes = productCheckboxes.stream()
-                .filter(checkbox -> checkbox.isSelected()).count();
+                .filter(WebElement::isSelected).count();
 
         //Assertions.assertEquals(7, numberOfSelectedCheckboxes, "Not all checkboxes were selected");
 

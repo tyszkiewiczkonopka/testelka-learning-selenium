@@ -1,9 +1,11 @@
+package tests;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class CartTests extends BaseTests{
+public class Cart extends BaseTest{
 
     private final By addToCartButtonLocator = By.name("add-to-cart");
     private final By minicartButtonLocator = By.className("wc-block-mini-cart__button");
